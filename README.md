@@ -116,8 +116,8 @@ The goal of this project is to help vegan travelers find the best restaurants in
 
 ## 👥 Team Collaboration
 ### **Contributors
-Jinyoung KO: Data scraping and analysis, BM25 implementation.
-Sainan BI: Streamlit UI and Google Maps integration, Keyword generation and data cleaning.
+- Jinyoung KO: Data scraping and analysis, BM25 implementation.
+- Sainan BI: Streamlit UI and Google Maps integration, Keyword generation and data cleaning.
 
 ---
 
