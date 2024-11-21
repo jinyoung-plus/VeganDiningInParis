@@ -1,0 +1,8 @@
+streamlit
+pandas
+rank-bm25
+googlemaps
+openai
+folium
+geopy
+streamlit-folium
