@@ -5,9 +5,16 @@ from geopy.geocoders import GoogleV3
 from streamlit_folium import st_folium
 from folium.plugins import MarkerCluster
 
+st.set_page_config(
+    page_title="Vegan recommendation",
+    layout="wide"
+)
+
+
 # Streamlit 제목
 st.title("Paris Landmark Map Viewer")
 
+"""
 # Google Maps API 키 설정
 API_KEY = "AIzaSyDza7pLB-ddE2XEHhX3fJkJ_XlaSUqg3Gs"
 
@@ -71,3 +78,4 @@ for i, row in valid_data.iterrows():
 # 지도 렌더링
 st.write("Explore the landmarks of Paris:")
 st_folium(m, width=725, height=500)
+"""
