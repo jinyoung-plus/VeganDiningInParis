@@ -87,18 +87,18 @@ The goal of this project is to help vegan travelers find the best restaurants in
 ---
 
 ## 🎨 Application Features
-### **Search Results
+### Search Results
 - Displays a ranked list of vegan restaurants in Paris based on user input.
 - Shows restaurant names, ratings, review counts, and a snippet of user reviews.
-### **Interactive Map
+### Interactive Map
 - Visualizes restaurant locations in Paris.
 - Clickable markers for restaurant details.
-### **Restaurant Details
+### Restaurant Details
 - Comprehensive information about each restaurant:
   - Categories (e.g., Vegan, French Cuisine)
   - Average rating
   - Total reviews
-  - User reviews (up to 5 recent ones)
+  - User reviews
 
 ---
 
@@ -115,9 +115,10 @@ The goal of this project is to help vegan travelers find the best restaurants in
 ---
 
 ## 👥 Team Collaboration
-### **Contributors
-- Jinyoung KO: Data scraping and analysis, BM25 implementation.
+### Contributors
+- Jinyoung KO: Webscraping and analysis, BM25 implementation.
 - Sainan BI: Streamlit UI and Google Maps integration, Keyword generation and data cleaning.
+- Yahya BOUAYAD: Streamlit Application Visualization
 
 ---
 
