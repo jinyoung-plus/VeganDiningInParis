@@ -24,6 +24,6 @@ st.divider()
 st.page_link("app.py", label="Home", icon="🌱")
 st.page_link("pages/Research.py", label="Restaurant Recommender", icon="1️⃣")
 st.page_link("pages/Favorite.py", label="Favorite", icon="⭐")
-st.page_link("pages/Statistics.py", label="Statisitcs", icon="%")
+st.page_link("pages/Statistics.py", label="Statistics", icon="➕")
 st.divider()
 
