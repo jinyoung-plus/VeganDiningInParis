@@ -28,8 +28,8 @@ else:
         try:
             # 生成推荐的 Prompt
             prompt = f"""
-            I have a restaurant named '{restaurant_name}', specializing in {cuisine_type}. 
-            Suggest three unique and popular dishes for this restaurant, with a short description for each dish.
+            I have a vegan restaurant named '{restaurant_name}', specializing in {cuisine_type}. 
+            Suggest three unique and popular dishes for this restaurant, with a very short description for each dish. This is a real restaurant in Paris.Please recommand the real dishes that it has. 
             """
 
             # 调用 OpenAI API
@@ -38,7 +38,7 @@ else:
                 {"role": "system", "content": "You are a helpful assistant."},
                 {"role": "user", "content": prompt}
             ],
-            max_tokens=150,
+            max_tokens=200,
             temperature=0.7)
 
             # 提取推荐结果
