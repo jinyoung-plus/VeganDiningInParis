@@ -9,19 +9,21 @@ from folium.plugins import MarkerCluster
 
 st.set_page_config(page_title="Home", layout="centered")
 
-st.title("Bienvenue dans l'Application de Recommandation")
+st.title("Welcome to the Recommendation App")
 st.markdown("""
-Bienvenue dans votre guide des restaurants végans à Paris 🌱. 
-- Explorez les restaurants par classement.
-- Visualisez les localisations sur une carte interactive.
-- Consultez des statistiques intéressantes.
-Utilisez le menu à gauche pour naviguer entre les pages.
+Welcome to your guide to vegan restaurants in Paris 🌱. 
+- Explore restaurants by rating.
+- View locations on an interactive map.
+- Check out some interesting statistics.
+Use the menu on the left to navigate between pages.
 """)
 
 st.snow()
 
+st.divider()
 st.page_link("app.py", label="Home", icon="🌱")
 st.page_link("pages/Research.py", label="Restaurant Recommender", icon="1️⃣")
 st.page_link("pages/Favorite.py", label="Favorite", icon="⭐")
-
+st.page_link("pages/Statistics.py", label="Statisitcs", icon="%")
+st.divider()
 

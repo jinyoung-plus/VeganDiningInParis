@@ -33,8 +33,6 @@ def load_embeddings():
 data = load_data()
 word2vec_embeddings, bert_embeddings = load_embeddings()
 
-
-
 # Initialize user input
 if "results" not in st.session_state:
     st.session_state.results = None
@@ -44,8 +42,8 @@ if "favorites" not in st.session_state:
 
 # Function to toggle favorites
 def toggle_favorite(restaurant):
-    if restaurant in st.session_state.favorites:
-        st.session_state.favorites.remove(restaurant)
+    if any(fav['Name'] == restaurant['Name'] for fav in st.session_state.favorites):
+        st.session_state.favorites = [fav for fav in st.session_state.favorites if fav['Name'] != restaurant['Name']]
     else:
         st.session_state.favorites.append(restaurant)
 
@@ -155,7 +153,7 @@ with right_col:
                 customer_reviews = "No reviews available for this restaurant."
 
             # Vérifier si le restaurant est déjà favori
-            is_favorite = row['Name'] in st.session_state.favorites
+            is_favorite = any(fav['Name'] == row['Name'] for fav in st.session_state.favorites)
             favorite_button_label = "⭐ Remove from Favorites" if is_favorite else "⭐ Add to Favorites"
 
             # Afficher les informations du restaurant
@@ -174,6 +172,11 @@ with right_col:
 
             # Bouton pour ajouter/enlever des favoris
             if st.button(favorite_button_label, key=f"fav-{row['Name']}"):
-                toggle_favorite(row['Name'])
-
-
+                toggle_favorite({
+                    "Name": row['Name'],
+                    "Address": row['Address'],
+                    "Rating": row['Rating'],
+                    "Reviews_Count": row['Reviews_Count'],
+                    "Location": row['Location'],
+                    "Reviews": row['Reviews']
+                })

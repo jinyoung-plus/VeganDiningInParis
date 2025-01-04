@@ -6,3 +6,6 @@ openai
 folium
 geopy
 streamlit-folium
+seaborn
+matplotlib
+plotly
